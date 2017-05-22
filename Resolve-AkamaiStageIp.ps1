@@ -68,7 +68,7 @@ function Resolve-AkamaiStageIp($hostname)
 
 function Get-Hostname
     {
-    $hostname = read-host "What's the hostname? order.dominos.com.au for e.g."
+    $hostname = read-host "What's the hostname? order.domain.com.au for e.g."
     if ($hostname -match "(?=^.{4,253}$)(^((?!-)[a-zA-Z0-9-]{1,63}(?<!-)\.)+[a-zA-Z]{2,63}$)")
         {
         Resolve-AkamaiStageIp -hostname $hostname
